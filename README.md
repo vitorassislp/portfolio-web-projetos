@@ -6,7 +6,7 @@ Aqui eu centralizo os projetos práticos de Front-end que desenvolvi para treina
 
 Meu foco com esses projetos foi consolidar a base do desenvolvimento web e boas práticas de organização de código.
 
-## 🛠 O que eu usei aqui
+## O que eu usei aqui
 Não usei frameworks pesados (como React ou Angular) propositalmente. O objetivo era dominar o básico bem feito:
 * **HTML5 Semântico** (para estrutura correta da página).
 * **CSS3** (Foco em Flexbox, Grid Layout e Responsividade/Mobile First).
