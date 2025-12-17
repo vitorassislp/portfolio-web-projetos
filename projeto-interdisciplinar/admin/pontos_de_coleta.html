@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecicleJá - Pontos de Coleta</title>
+    <link rel="stylesheet" href="../css/dashboard_style.css">
+    <link rel="stylesheet" href="../css/pontos_de_coleta_style.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+    <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="container-dashboard">
+        <header class="cabecalho-dashboard">
+            <a href="#" class="logo-container">
+                <img src="../imagens/logo.png" alt="Logo RecicleJá" class="logo-dashboard">
+                <p class="texto-logo-dashboard">Recicle Já</p>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="admin_dashboard.html">Home</a></li>
+                    <li><a href="agendar_coleta.html">Agendar Coleta</a></li>
+                    <li><a href="pontos_de_coleta.html">Pontos de Coleta</a></li>
+                    <li><a href="quem_somosAdmin.html">Quem Somos</a></li>
+                </ul>
+            </nav>
+            <i class="fas fa-user-circle icone-perfil" id="abrirMenuBtn"></i>
+        </header>
+
+        <main class="conteudo-principal-dashboard">
+            <div class="background-image-dashboard"></div>
+            <div class="pontos-coleta-main">
+                <div class="mapa-e-busca-container">
+                    <div class="barra-busca">
+                        <i class="fas fa-search icone-busca"></i>
+                        <input type="text" placeholder="Digite seu endereço">
+                        <button class="botao-confirmar-busca">Confirmar</button>
+                    </div>
+                    <div class="mapa-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.697404707866!2d-40.299214199999994!3d-20.3541156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb8160595555555%3A0xeab993fdd7de1f61!2sUniversidade%20Vila%20Velha%20-%20UVV!5e0!3m2!1spt-BR!2sbr!4v1749271337664!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <p class="mapa-data">Map data @2025 Google</p>
+                    </div>
+                </div>
+                <div class="lista-pontos-coleta">
+                    <h3>Pontos de coleta</h3>
+                    <ul>
+                        <li>
+                            <p><strong>Ponto A:</strong> Rua Exemplo, 123 - Cidade X</p>
+                            <p>Tipos: Papel, Plástico</p>
+                            <p>Horário: 08:00 - 17:00</p>
+                        </li>
+                        <li>
+                            <p><strong>Ponto B:</strong> Av. Central, 456 - Cidade Y</p>
+                            <p>Tipos: Metal, Vidro</p>
+                            <p>Horário: 09:00 - 18:00</p>
+                        </li>
+                        <li>
+                            <p><strong>Ponto C:</strong> Praça Verde, 789 - Cidade Z</p>
+                            <p>Tipos: Eletrônicos</p>
+                            <p>Horário: 10:00 - 16:00</p>
+                        </li>
+                         <li>
+                            <p><strong>Ponto D:</strong> Rua das Flores, 101 - Cidade A</p>
+                            <p>Tipos: Papel, Plástico, Metal</p>
+                            <p>Horário: 08:30 - 17:30</p>
+                        </li>
+                        <li>
+                            <p><strong>Ponto E:</strong> Av. do Sol, 202 - Cidade B</p>
+                            <p>Tipos: Vidro, Orgânico</p>
+                            <p>Horário: 09:30 - 18:30</p>
+                        </li>
+                        <li>
+                            <p><strong>Ponto F:</strong> Alameda dos Pássaros, 303 - Cidade C</p>
+                            <p>Tipos: Todos</p>
+                            <p>Horário: 07:00 - 19:00</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer class="rodape-dashboard">
+            <p>© 2025 Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <div id="sideMenu" class="side-menu">
+        <div class="side-menu-header">
+            <h3>Menu</h3>
+            <span class="close-side-menu">&times;</span> </div>
+        <ul class="side-menu-nav">
+            <li><a href="#">Minha Conta</a></li>
+            <li><a href="#">Configurações</a></li>
+            <hr> <li><a href="../login/login.html" class="botao-sair">Sair</a></li> </ul>
+    </div>
+
+    <script src="../js/common_script.js"></script>
+</body>
+</html>

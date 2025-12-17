@@ -1,0 +1,114 @@
+.agendamentos-box {
+    background-color: rgba(51, 85, 51, 0.8);
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 900px;
+    width: 100%;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    position: relative;
+    z-index: 10;
+}
+
+.agendamentos-box h2 {
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.tabela-agendamentos-responsiva {
+    width: 100%;
+    overflow-x: auto; /* Permite a rolagem horizontal da tabela em telas pequenas */
+    -webkit-overflow-scrolling: touch; /* Suaviza a rolagem em dispositivos iOS */
+    margin-bottom: 20px;
+}
+
+.tabela-agendamentos {
+    width: 100%;
+    border-collapse: collapse; 
+    min-width: 600px;
+}
+
+.tabela-agendamentos thead {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tabela-agendamentos th {
+    padding: 15px 10px;
+    text-align: left;
+    font-weight: 600;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.tabela-agendamentos tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabela-agendamentos tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tabela-agendamentos td {
+    padding: 12px 10px;
+    text-align: left;
+    color: #ffffff;
+}
+
+
+@media (max-width: 992px) {
+    .agendamentos-box {
+        padding: 30px;
+        max-width: 800px;
+        margin: 30px auto;
+    }
+    .agendamentos-box h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .agendamentos-box {
+        padding: 25px;
+        margin: 20px auto;
+        max-width: 95%;
+    }
+    .agendamentos-box h2 {
+        font-size: 1.8em;
+    }
+    .tabela-agendamentos-responsiva {
+        margin-bottom: 10px;
+    }
+    .tabela-agendamentos th,
+    .tabela-agendamentos td {
+        padding: 10px 8px;
+        font-size: 0.9em;
+    }
+    .tabela-agendamentos {
+        min-width: 550px;
+    }
+}
+
+@media (max-width: 480px) {
+    .agendamentos-box {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    .agendamentos-box h2 {
+        font-size: 1.5em;
+    }
+    .tabela-agendamentos th,
+    .tabela-agendamentos td {
+        padding: 8px 5px;
+        font-size: 0.8em;
+    }
+    .tabela-agendamentos {
+        min-width: 450px;
+    }
+}

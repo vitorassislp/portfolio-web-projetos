@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecicleJá - Agendamentos</title>
+    <link rel="stylesheet" href="../css/dashboard_style.css">
+    <link rel="stylesheet" href="../css/agendamentos_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="container-dashboard">
+        <header class="cabecalho-dashboard">
+            <a href="#" class="logo-container">
+                <img src="../imagens/logo.png" alt="Logo RecicleJá" class="logo-dashboard">
+                <p class="texto-logo-dashboard">Recicle Já</p>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="cooperacao_dashboard.html">Home</a></li>
+                    <li><a href="cadastro_de_residuo.html">Cadastro de Resíduo</a></li>
+                    <li><a href="agendamentos.html">Agendamentos</a></li>
+                    <li><a href="quem_somosCoop.html">Quem Somos</a></li>
+                </ul>
+            </nav>
+            <i class="fas fa-user-circle icone-perfil" id="abrirMenuBtn"></i>
+        </header>
+
+        <main class="conteudo-principal-dashboard">
+            <div class="background-image-dashboard"></div>
+            <div class="agendamentos-box">
+                <h2>Agendamentos</h2>
+                <div class="tabela-agendamentos-responsiva">
+                    <table class="tabela-agendamentos">
+                        <thead>
+                            <tr>
+                                <th>NOME</th>
+                                <th>TIPO DE LIXO</th>
+                                <th>QUANTIDADE</th>
+                                <th>DATA</th>
+                                <th>HORA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>João Silva</td>
+                                <td>Plástico</td>
+                                <td>3 kg</td>
+                                <td>28/05/2025</td>
+                                <td>14:00</td>
+                            </tr>
+                            <tr>
+                                <td>Maria Costa</td>
+                                <td>Papel</td>
+                                <td>2 kg</td>
+                                <td>28/05/2025</td>
+                                <td>16:00</td>
+                            </tr>
+                            <tr>
+                                <td>Carlos Lima</td>
+                                <td>Vidro</td>
+                                <td>4 kg</td>
+                                <td>28/05/2025</td>
+                                <td>16:00</td>
+                            </tr>
+                            <tr>
+                                <td>Ana Souza</td>
+                                <td>Metal</td>
+                                <td>1.5 kg</td>
+                                <td>28/05/2025</td>
+                                <td>07:00</td>                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <footer class="rodape-dashboard">
+            <p>&copy; 2025 Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <div id="sideMenu" class="side-menu">
+        <div class="side-menu-header">
+            <h3>Menu</h3>
+            <span class="close-side-menu">&times;</span> </div>
+        <ul class="side-menu-nav">
+            <li><a href="#">Minha Conta</a></li>
+            <li><a href="#">Configurações</a></li>
+            <hr> <li><a href="../login/login.html" class="botao-sair">Sair</a></li> </ul>
+    </div>
+
+    <script src="../js/common_script.js"></script>
+</body>
+</html>

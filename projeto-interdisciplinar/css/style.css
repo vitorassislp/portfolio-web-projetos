@@ -1,0 +1,159 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../imagens/imagemFloresta.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    z-index: 0;
+}
+
+.cabecalho {
+    padding: 20px 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.texto-logo {
+    color: #ffffff;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.conteudo-principal {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.titulo-principal, .subtitulo {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.titulo-principal {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitulo {
+    font-size: 2em;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.botao-login {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 2;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.botao-login:hover {
+    background-color: #558B2F;
+    border-color: #558B2F;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 2.5em;
+    }
+    .subtitulo {
+        font-size: 1.5em;
+    }
+    .botao-login {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+    .cabecalho {
+        padding: 15px 25px;
+        gap: 8px;
+    }
+    .logo {
+        width: 70px;
+    }
+    .texto-logo {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-principal {
+        font-size: 2em;
+    }
+    .subtitulo {
+        font-size: 1.2em;
+    }
+    .botao-login {
+        padding: 10px 25px;
+        font-size: 0.9em;
+    }
+    .cabecalho {
+        padding: 10px 15px;
+        gap: 5px;
+    }
+    .logo {
+        width: 60px;
+    }
+    .texto-logo {
+        font-size: 1.2em;
+    }
+}

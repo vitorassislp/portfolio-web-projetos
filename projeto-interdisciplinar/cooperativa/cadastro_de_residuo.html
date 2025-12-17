@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecicleJá - Cadastro de Resíduo</title>
+    <link rel="stylesheet" href="../css/dashboard_style.css">
+    <link rel="stylesheet" href="../css/cadastro_de_residuo_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="container-dashboard">
+        <header class="cabecalho-dashboard">
+            <a href="#" class="logo-container">
+                <img src="../imagens/logo.png" alt="Logo RecicleJá" class="logo-dashboard">
+                <p class="texto-logo-dashboard">Recicle Já</p>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="cooperacao_dashboard.html">Home</a></li>
+                    <li><a href="cadastro_de_residuo.html">Cadastro de Resíduo</a></li>
+                    <li><a href="agendamentos.html">Agendamentos</a></li>
+                    <li><a href="quem_somosCoop.html">Quem Somos</a></li>
+                </ul>
+            </nav>
+            <i class="fas fa-user-circle icone-perfil" id="abrirMenuBtn"></i>
+        </header>
+
+        <main class="conteudo-principal-dashboard">
+            <div class="background-image-dashboard"></div>
+            <div class="cadastro-residuo-box">
+                <h2>Cadastro de Resíduo</h2>
+                <form action="#" method="POST" class="formulario-cadastro">
+                    <div class="grupo-entrada">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00">
+                    </div>
+
+                    <div class="tipo-residuo-secao">
+                        <h3>Tipo de Resíduo</h3>
+                        <div class="lista-residuos">
+                            <div class="item-residuo">
+                                <input type="radio" id="residuo1" name="tipoResiduo" value="papel">
+                                <label for="residuo1">Papel</label>
+                                <input type="text" name="quantidadePapel" placeholder="Quantidade">
+                            </div>
+                            <div class="item-residuo">
+                                <input type="radio" id="residuo2" name="tipoResiduo" value="plastico">
+                                <label for="residuo2">Plástico</label>
+                                <input type="text" name="quantidadePlastico" placeholder="Quantidade">
+                            </div>
+                            <div class="item-residuo">
+                                <input type="radio" id="residuo3" name="tipoResiduo" value="metal">
+                                <label for="residuo3">Metal</label>
+                                <input type="text" name="quantidadeMetal" placeholder="Quantidade">
+                            </div>
+                            <div class="item-residuo">
+                                <input type="radio" id="residuo4" name="tipoResiduo" value="vidro">
+                                <label for="residuo4">Vidro</label>
+                                <input type="text" name="quantidadeVidro" placeholder="Quantidade">
+                            </div>
+                            <div class="item-residuo">
+                                <input type="radio" id="residuo5" name="tipoResiduo" value="organico">
+                                <label for="residuo5">Orgânico</label>
+                                <input type="text" name="quantidadeOrganico" placeholder="Quantidade">
+                            </div>
+                            </div>
+                    </div>
+
+                    <div class="botoes-form">
+                        <button type="reset" class="botao-limpar">Limpar</button>
+                        <button type="submit" class="botao-confirmar-cadastro">Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer class="rodape-dashboard">
+            <p>&copy; 2025 Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <div id="sideMenu" class="side-menu">
+        <div class="side-menu-header">
+            <h3>Menu</h3>
+            <span class="close-side-menu">&times;</span> </div>
+        <ul class="side-menu-nav">
+            <li><a href="#">Minha Conta</a></li>
+            <li><a href="#">Configurações</a></li>
+            <hr> <li><a href="../login/login.html" class="botao-sair">Sair</a></li> </ul>
+    </div>
+
+    <script src="../js/common_script.js"></script>
+</body>
+</html>

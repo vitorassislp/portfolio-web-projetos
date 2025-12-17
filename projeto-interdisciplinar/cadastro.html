@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecicleJá - Cadastro</title>
+    <link rel="stylesheet" href="./css/cadastro.css">
+    <link rel="shortcut icon" href="./imagens/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="./imagens/folhas.png" alt="Folhas decorativas">
+            <p class="texto-secao-cadastro">Crie sua<br>Conta</p>
+        </div>
+        <div class="right">
+            <a class="criar-conta-link" href="./login/login.html"> Voltar ao Login </a> <form>
+                <h2>Cadastro</h2>
+                <input type="text" placeholder="CNPJ">
+                <input type="text" placeholder="Usuário">
+                <input type="password" placeholder="Senha">
+                <input type="password" placeholder="Confirmar Senha">
+
+                <h3>Tipo de empresa</h3>
+                <div class="tipo-empresa-opcoes">
+                    <label>
+                        <input type="radio" name="tipo_empresa" value="descartante"> Descartante
+                    </label>
+                    <label>
+                        <input type="radio" name="tipo_empresa" value="coletor"> Coletor
+                    </label>
+                </div>
+                
+                <button type="submit">Criar</button>
+            </form>
+        </div>
+    </div>
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+</body>
+</html>

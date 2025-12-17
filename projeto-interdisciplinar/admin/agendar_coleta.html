@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecicleJá - Agendar Coleta</title>
+    <link rel="stylesheet" href="../css/dashboard_style.css">
+    <link rel="stylesheet" href="../css/agendar_coleta_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="../imagens/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container-dashboard">
+        <header class="cabecalho-dashboard">
+            <a href="#" class="logo-container">
+                <img src="../imagens/logo.png" alt="Logo RecicleJá" class="logo-dashboard">
+                <p class="texto-logo-dashboard">Recicle Já</p>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="admin_dashboard.html">Home</a></li>
+                    <li><a href="agendar_coleta.html">Agendar Coleta</a></li>
+                    <li><a href="pontos_de_coleta.html">Pontos de Coleta</a></li>
+                    <li><a href="quem_somosAdmin.html">Quem Somos</a></li>
+                </ul>
+            </nav>
+            <i class="fas fa-user-circle icone-perfil" id="abrirMenuBtn"></i>
+        </header>
+
+        <main class="conteudo-principal-dashboard">
+            <div class="background-image-dashboard"></div>
+            <div class="agendar-coleta-box">
+                <h2>Agende sua coleta</h2>
+                <form action="#" method="POST" class="formulario-agendamento" id="formularioAgendamento">
+                    <div class="grupo-entrada">
+                        <label for="nomeEmpresa">Nome da empresa</label>
+                        <input type="text" id="nomeEmpresa" name="nomeEmpresa" placeholder="Digite o nome da empresa">
+                    </div>
+                    <div class="grupo-entrada">
+                        <label for="tipoLixo">Tipo de lixo</label>
+                        <select id="tipoLixo" name="tipoLixo">
+                            <option value="">Selecione</option>
+                            <option value="papel">Papel</option>
+                            <option value="plastico">Plástico</option>
+                            <option value="metal">Metal</option>
+                            <option value="vidro">Vidro</option>
+                            <option value="organico">Orgânico</option>
+                            <option value="eletronico">Eletrônico</option>
+                        </select>
+                    </div>
+                    <div class="grupo-entrada">
+                        <label for="quantidade">Quantidade</label>
+                        <input type="text" id="quantidade" name="quantidade">
+                    </div>
+                    <div class="grupo-entrada">
+                        <label for="dataColeta">Data</label>
+                        <input type="date" id="dataColeta" name="dataColeta">
+                    </div>
+                    <div class="grupo-entrada">
+                        <label for="horaColeta">Hora</label>
+                        <input type="time" id="horaColeta" name="horaColeta">
+                    </div>
+                    <div class="grupo-entrada">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" id="endereco" name="endereco">
+                    </div>
+                    <div class="grupo-entrada">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade">
+                    </div>
+                    <div class="botoes-form">
+                        <button type="reset" class="botao-limpar">Limpar</button>
+                        <button type="submit" class="botao-enviar-coleta">Enviar</button>
+                    </div>
+                </form>
+
+                <div class="anexar-imagem-secao">
+                    <h3>Anexar imagem</h3>
+                    <div class="upload-box">
+                        <p>Upload de Arquivo</p>
+                        <input type="file" id="uploadArquivo" name="uploadArquivo" accept="image/*">
+                        <label for="uploadArquivo" class="botao-upload">Escolher arquivo</label>
+                        <span id="nomeArquivoSelecionado">Nenhum arquivo escolhido</span>
+                    </div>
+                    <button type="button" class="botao-enviar-upload">Enviar</button>
+                </div>
+            </div>
+        </main>
+        <footer class="rodape-dashboard">
+            <p>&copy; 2025 Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById('uploadArquivo').addEventListener('change', function () {
+            const fileName = this.files.length > 0 ? this.files[0].name : 'Nenhum arquivo escolhido';
+            document.getElementById('nomeArquivoSelecionado').textContent = fileName;
+        });
+    </script>
+    <div id="menuOverlay" class="menu-overlay"></div>
+
+    <div id="sideMenu" class="side-menu">
+        <div class="side-menu-header">
+            <h3>Menu</h3>
+            <span class="close-side-menu">&times;</span>
+        </div>
+        <ul class="side-menu-nav">
+            <li><a href="#">Minha Conta</a></li>
+            <li><a href="#">Configurações</a></li>
+            <hr>
+            <li><a href="../login/login.html" class="botao-sair">Sair</a></li>
+        </ul>
+    </div>
+
+    <script src="../js/common_script.js"></script>
+</body>
+
+</html>

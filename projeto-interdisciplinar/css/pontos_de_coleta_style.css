@@ -1,0 +1,211 @@
+.pontos-coleta-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
+    color: #333;
+    position: relative;
+    z-index: 10;
+}
+
+.mapa-e-busca-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 400px;
+}
+
+.barra-busca {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.icone-busca {
+    color: #555;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.barra-busca input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 1em;
+    background-color: transparent;
+    color: #333;
+}
+
+.botao-confirmar-busca {
+    background-color: #558B2F;
+    color: #ffffff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.botao-confirmar-busca:hover {
+    background-color: #335533;
+}
+
+.mapa-container {
+    height: 450px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.mapa-placeholder {
+    display: none;
+}
+
+.mapa-data {
+    font-size: 0.7em;
+    color: #666;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 3px 5px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 1;
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.lista-pontos-coleta {
+    flex: 1;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+    max-height: 500px;
+    overflow-y: auto;
+    min-width: 280px;
+}
+
+.lista-pontos-coleta h3 {
+    color: #335533;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.lista-pontos-coleta ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-pontos-coleta li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.lista-pontos-coleta li:last-child {
+    margin-bottom: 0;
+}
+
+.lista-pontos-coleta li p {
+    margin-bottom: 5px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.lista-pontos-coleta li p strong {
+    color: #333;
+}
+
+
+@media (max-width: 992px) {
+    .pontos-coleta-main {
+        flex-direction: column;
+        align-items: center;
+        max-width: 700px;
+    }
+    .mapa-e-busca-container {
+        min-width: unset;
+        width: 100%;
+    }
+    .mapa-container {
+        height: 400px;
+    }
+    .lista-pontos-coleta {
+        min-width: unset;
+        width: 100%;
+        margin-top: 20px;
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pontos-coleta-main {
+        padding: 20px;
+        margin: 30px auto;
+    }
+    .mapa-container {
+        height: 300px;
+    }
+    .lista-pontos-coleta {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pontos-coleta-main {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    .barra-busca input[type="text"] {
+        font-size: 0.9em;
+    }
+    .botao-confirmar-busca {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+    .mapa-container {
+        height: 250px;
+    }
+    .mapa-placeholder {
+        font-size: 1.2em;
+    }
+    .lista-pontos-coleta h3 {
+        font-size: 1.4em;
+    }
+    .lista-pontos-coleta li {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
