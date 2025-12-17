@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../style/fonts/font.css">
+</head>
+
+<body>
+  <header>
+    <div id="title">
+      <h1>Landing</h1>
+      <h1>Page</h1>
+    </div>
+    <ul class="topbottoms">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../serviços/serviços.html">Serviços</a></li>
+      <li><a href="../github/github.html">Github</a></li>
+      <li><a href="../curriculo/curriculo.html">Currículo</a></li>
+      <li><a href="../contato/contato.html">Contato</a></li>
+    </ul>
+  </header>
+  <main>
+
+    <form>
+      <h2>Contato</h2>
+      <label for="nome">Nome completo:</label><br>
+      <input type="text" id="nome" name="nome" required><br><br>
+      <label for="telefone">Telefone:</label><br>
+      <input type="tel" id="telefone" name="telefone" required><br><br>
+      <label for="email">E-mail:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      <label>Tipo de cadastro:</label><br>
+      <input type="radio" id="fisica" name="tipo" value="fisica" checked>
+      <label for="fisica">Pessoa Física</label><br>
+      <input type="radio" id="juridica" name="tipo" value="juridica">
+      <label for="juridica">Pessoa Jurídica</label><br><br>
+      <label for="horario">Melhor horário para contato:</label><br>
+      <select id="horario" name="horario">
+        <option value="manha">Manhã (8h-12h)</option>
+        <option value="tarde">Tarde (13h-18h)</option>
+        <option value="noite">Noite (18h-21h)</option>
+      </select><br><br>
+      <label for="servico">Tipo de serviço desejado:</label><br>
+      <select id="servico" name="servico">
+        <option value="consultoria">Consultoria</option>
+        <option value="desenvolvimento">Desenvolvimento</option>
+        <option value="design">Design</option>
+        <option value="outro">Outro</option>
+      </select><br><br>
+      <label for="descricao">Descrição do que deseja contratar:</label><br>
+      <textarea id="descricao" name="descricao" rows="4" cols="50" required></textarea><br><br>
+      <input type="submit" value="Enviar">
+    </form>
+  </main>
+
+</body>
+
+</html>

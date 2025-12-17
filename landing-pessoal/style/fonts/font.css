@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(./Montserrat-Medium.ttf);
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face {
+    font-family: MontserratBlack;
+    src: url(./Montserrat-Black.ttf);
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face {
+    font-family: MontserratLight;
+    src: url(./Montserrat-Light.ttf);
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face {
+    font-family: MontserratBold;
+    src: url(./Montserrat-Bold.ttf);
+    font-weight: normal;
+    font-size: normal;
+}
