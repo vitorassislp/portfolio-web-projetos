@@ -1,0 +1,675 @@
+/* =========================================
+   TEITEC CLEAN LUXURY - style.css (V5 Final)
+   ========================================= */
+
+:root {
+    /* Cores Principais */
+    --navy-blue: #0A192F;      /* Azul Profundo e Sóbrio */
+    --royal-gold: #D4AF37;     /* Dourado Metálico Real */
+    --gold-hover: #B5952F;     /* Dourado mais escuro para hover */
+    
+    /* Cores de Texto e Fundo */
+    --text-dark: #1F2937;
+    --text-gray: #4B5563;
+    --bg-white: #FFFFFF;
+    --bg-light: #F3F4F6;       /* Cinza muito suave para seções alternadas */
+    
+    /* Layout e Espaçamento */
+    --container-max: 1200px;
+    --header-height: 90px;     /* Aumentei levemente para a logo respirar */
+    
+    /* Efeitos */
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --radius: 8px;
+    --transition: all 0.3s ease-in-out;
+}
+
+/* --- 1. RESET E BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-gray);
+    background-color: var(--bg-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--navy-blue);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- 2. LAYOUT GERAL --- */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-alt {
+    background-color: var(--bg-light);
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.bg-dark {
+    background-color: var(--navy-blue);
+    color: var(--bg-white);
+}
+
+/* --- 3. HEADER (Navegação) --- */
+header {
+    background-color: var(--bg-white);
+    height: var(--header-height);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo do Menu (Colorida Original) */
+.logo img {
+    height: 55px; /* Tamanho ideal para o menu */
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo a:hover img {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#menu a {
+    color: var(--navy-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#menu a:hover {
+    color: var(--royal-gold);
+}
+
+.btn-nav {
+    background-color: var(--navy-blue);
+    color: var(--bg-white) !important;
+    padding: 10px 24px;
+    border-radius: 4px;
+}
+
+.btn-nav:hover {
+    background-color: var(--royal-gold) !important;
+    transform: translateY(-2px);
+}
+
+#btn-mobile {
+    display: none;
+}
+
+/* --- 4. HERO SECTION --- */
+.hero {
+    height: 100vh;
+    min-height: 750px; /* Aumentei um pouco para caber a logo extra */
+    background: radial-gradient(circle at center, rgba(10, 25, 47, 0.6) 0%, rgba(5, 11, 20, 0.95) 100%), 
+                url('../img/gallery/hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: var(--header-height);
+    text-align: center;
+    position: relative;
+}
+
+.hero .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+    background: rgba(13, 33, 66, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 60px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 4px solid var(--royal-gold);
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 
+                0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* NOVA CLASSE: Logo Branca da Capa */
+.hero-logo {
+    width: 130px; /* Tamanho imponente */
+    height: auto;
+    margin: 0 auto 25px auto; /* Centraliza e dá espaço para o título */
+    display: block;
+    
+    /* O FILTRO MÁGICO: Transforma qualquer cor em BRANCO puro */
+    filter: brightness(0) invert(1); 
+    
+    opacity: 0.95;
+    transition: transform 0.5s ease;
+}
+
+.hero-logo:hover {
+    transform: scale(1.05); /* Efeito sutil de zoom */
+}
+
+.hero h1 {
+    font-size: 3.5rem; /* Ajustado levemente para equilibrar com a logo */
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: #ffff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    color: #cbd5e1;
+    font-weight: 300;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- 5. BOTÕES --- */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--royal-gold);
+    color: var(--bg-white);
+    padding: 15px 35px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--royal-gold);
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--gold-hover);
+    border-color: var(--gold-hover);
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--bg-white);
+    padding: 15px 35px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--bg-white);
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-white);
+    color: var(--navy-blue);
+}
+
+/* --- 6. TÍTULOS DE SEÇÃO --- */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--royal-gold);
+    margin: 15px auto 0;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+}
+
+/* --- 7. CARDS E GRIDS --- */
+.grid-tecnologia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--bg-white);
+    padding: 40px 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    border: 1px solid #eee;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--royal-gold);
+}
+
+.card .icon {
+    font-size: 3rem;
+    color: var(--royal-gold);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* Grid Diferenciais */
+.grid-diferenciais {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.list-check-custom {
+    list-style: none;
+    padding: 0;
+}
+
+.list-check-custom li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+.list-check-custom li i {
+    color: var(--royal-gold);
+    font-size: 1.4rem;
+    min-width: 30px;
+    text-align: center;
+}
+
+.info-img img {
+    border-radius: var(--radius);
+    box-shadow: 20px 20px 0 var(--navy-blue);
+}
+
+/* Grid Promoções */
+.grid-promocoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.promo-card {
+    background: var(--bg-white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    border: 1px solid #eee;
+}
+
+.promo-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-5px);
+}
+
+.promo-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.promo-body {
+    padding: 25px;
+}
+
+.promo-body h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.promo-price {
+    font-size: 1.6rem;
+    color: var(--royal-gold);
+    font-weight: 700;
+    margin: 15px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.promo-body .btn-primary {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Parceiros */
+.logos-parceiros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.logos-parceiros img {
+    height: 50px;
+    transition: var(--transition);
+}
+
+.logos-parceiros img:hover {
+    transform: scale(1.05); /* Zoom sutil ao passar o mouse */
+}
+
+/* --- 8. FORMULÁRIOS E SWITCHER --- */
+.form-wrapper {
+    background-color: var(--bg-white);
+    padding: 40px;
+    border-radius: var(--radius);
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.bg-dark .form-wrapper {
+    color: var(--text-dark); 
+}
+
+.bg-dark .form-wrapper h2, 
+.bg-dark .form-wrapper p {
+    color: var(--navy-blue);
+}
+
+.main-form {
+    margin-top: 25px;
+}
+
+/* Selector de PF / PJ */
+.tipo-pessoa-wrapper {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.label-selector {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--navy-blue);
+    font-size: 0.95rem;
+}
+
+.tipo-pessoa-selector {
+    display: inline-flex;
+    background: #e5e7eb;
+    padding: 4px;
+    border-radius: 50px;
+    position: relative;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tipo-pessoa-selector input[type="radio"] {
+    display: none; /* Esconde a bolinha padrão do radio */
+}
+
+.btn-selector {
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    cursor: pointer;
+    transition: var(--transition);
+    user-select: none;
+}
+
+/* Estado selecionado do Switch */
+.tipo-pessoa-selector input[type="radio"]:checked + label {
+    background-color: var(--navy-blue);
+    color: var(--royal-gold);
+    box-shadow: 0 2px 10px rgba(10, 25, 47, 0.3);
+}
+
+/* Campos do Formulário */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-row .form-group {
+    flex: 1;
+    min-width: 200px; /* Garante que não fique muito estreito no mobile */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--navy-blue);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #fff;
+    color: var(--text-dark);
+    transition: var(--transition);
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--royal-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.form-checkbox input {
+    width: auto;
+    margin-top: 5px;
+}
+
+/* Classes utilitárias para esconder/mostrar */
+.hidden-step {
+    display: none !important;
+}
+
+.hidden-field {
+    display: none !important;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--navy-blue);
+    color: var(--bg-white);
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.btn-submit:hover {
+    background-color: var(--royal-gold);
+    transform: translateY(-2px);
+}
+
+.btn-pular:hover {
+    background-color: rgba(212, 175, 55, 0.1) !important;
+}
+
+.form-instruction {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+/* --- 9. FOOTER --- */
+footer {
+    background-color: var(--navy-blue);
+    color: rgba(255,255,255,0.7);
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-info img {
+    height: 40px;
+    margin-bottom: 20px;
+    /* Filtro para garantir logo branca no rodapé escuro */
+    filter: brightness(0) invert(1); 
+}
+
+.footer-contact h3, .footer-links h3 {
+    color: var(--bg-white);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: rgba(255,255,255,0.7);
+}
+
+.footer-links ul li a:hover {
+    color: var(--royal-gold);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.85rem;
+}
+
+/* Animações (para o animations.js) */
+.reveal-effect {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.active-animation {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "titulo": "Kit Residencial Essential",
+        "descricao": "Ideal para casas com consumo médio. Inclui 4 placas de alta performance e inversor de alta eficiência.",
+        "preco": "12.900,00",
+        "imagem": "assets/img/gallery/kit-01.png"
+    },
+    {
+        "titulo": "Kit Família Premium",
+        "descricao": "Máxima geração para residências grandes. Tecnologia anti-granizo e monitoramento via app.",
+        "preco": "18.500,00",
+        "imagem": "assets/img/gallery/kit-02.webp"
+    },
+    {
+        "titulo": "Sistema Business Pro",
+        "descricao": "Solução robusta para comércios e pequenas indústrias. Redução drástica na conta de luz.",
+        "preco": "35.000,00",
+        "imagem": "assets/img/gallery/kit-03.png"
+    }
+]
